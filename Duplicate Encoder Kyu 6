@@ -1,0 +1,6 @@
+const duplicateEncode = word => {return [...word.toLowerCase()]
+.map( function (a, i, w) {
+return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+  })
+.join("");
+}
