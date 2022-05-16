@@ -1,0 +1,6 @@
+const longestConsec = (strarr, k) => k <= 0 || k > strarr.length ?
+    ''
+    : strarr.reduce((longest, curr, i) => {
+        curr += strarr.slice(i + 1, k + i).join('')
+        return curr.length > longest.length ? curr : longest
+      }, '')
